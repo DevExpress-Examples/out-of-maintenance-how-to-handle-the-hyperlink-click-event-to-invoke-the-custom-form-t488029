@@ -9,6 +9,7 @@ using System.Windows;
 using DevExpress.Office.Layout;
 using DevExpress.Xpf.Core;
 using System.Windows.Forms;
+using DevExpress.Portable.Input;
 
 namespace DXRichEditHyperlinkHandling
 {
@@ -46,7 +47,7 @@ namespace DXRichEditHyperlinkHandling
         {
             InitializeComponent();
             richEditControl1.LoadDocument("HyperlinkClickHandling.rtf");
-            richEditControl1.Options.Hyperlinks.ModifierKeys = Keys.None;
+            richEditControl1.Options.Hyperlinks.ModifierKeys = PortableKeys.None;
         }
         #region #HyperlinkClickEvent
         private void richEditControl1_HyperlinkClick(object sender, HyperlinkClickEventArgs e)
